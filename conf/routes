@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET           /api/movies/search              controllers.MovieManager.searchMovie(query: String)
+GET           /api/movies                     controllers.MovieManager.getAllMovies()
+POST          /api/movies                     controllers.MovieManager.addMovie()
+DELETE        /api/movies/:title              controllers.MovieManager.deleteMovie(title: String)
+PUT           /api/movies/:title              controllers.MovieManager.editMovie(title: String)
+
+GET           /api/movies/:title/reviews      controllers.ReviewManager.getReviews(title: String)
+POST          /api/movies/:title/reviews      controllers.ReviewManager.addReview(title: String)
+
+DELETE        /api/reviews/:title             controllers.ReviewManager.deleteReview(title: String)
+PUT           /api/reviews/:title             controllers.ReviewManager.editReview(title: String)
