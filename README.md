@@ -1,3 +1,1 @@
 # MovieReviewer
-
-No License
