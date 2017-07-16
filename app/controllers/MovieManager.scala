@@ -67,7 +67,7 @@ class MovieManager @Inject() extends Controller {
           description = newReview.description,
           releaseYear = newReview.releaseYear,
           reviews = newReview.reviews))))
-      .map(_ => Ok("Review updated"))
-      .getOrElse(BadRequest("Could not update Review"))
+      .map(_ => Ok("Movie updated"))
+      .getOrElse(BadRequest("Could not update Movie"))
   }
 }
