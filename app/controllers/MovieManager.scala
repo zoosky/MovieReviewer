@@ -61,12 +61,12 @@ class MovieManager @Inject() extends Controller {
       .whereEqual("title", title)
       .fetchOne()
       .flatMap(oldMovie =>
-        decodedMovie.map(newReview => Db.save(oldMovie.copy(
-          title = newReview.title,
-          director = newReview.director,
-          description = newReview.description,
-          releaseYear = newReview.releaseYear,
-          reviews = newReview.reviews))))
+        decodedMovie.map(newMovie => Db.save(oldMovie.copy(
+          title = newMovie.title,
+          director = newMovie.director,
+          description = newMovie.description,
+          releaseYear = newMovie.releaseYear,
+          reviews = newMovie.reviews))))
       .map(_ => Ok("Movie updated"))
       .getOrElse(BadRequest("Could not update Movie"))
   }
