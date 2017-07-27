@@ -1,13 +1,2 @@
-logs
 target
 .idea
-/.classpath
-/.project
-/.settings
-/RUNNING_PID
-node_modules
-npm-debug.log
-.sass-cache
-phantomjsdriver.log
-project/project/
-public/out.png
